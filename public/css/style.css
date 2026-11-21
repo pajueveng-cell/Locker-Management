@@ -1,0 +1,1950 @@
+/* =====================================================
+   LOCKER MANAGEMENT SYSTEM
+   CORPORATE INDUSTRIAL UI
+===================================================== */
+
+
+/* =====================
+   GLOBAL
+===================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    background:#f4f6fa;
+
+    font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    color:#334155;
+
+}
+
+
+
+
+/* =====================
+   LAYOUT
+===================== */
+
+
+.wrapper{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+
+
+.content{
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    padding:35px;
+
+}
+
+
+
+
+
+/* =====================
+   SIDEBAR
+===================== */
+
+
+.sidebar{
+
+    width:260px;
+
+    height:100vh;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    background:#0B1F3A;
+
+    color:white;
+
+    padding:25px;
+
+    z-index:1000;
+
+}
+
+
+
+.sidebar-brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding-bottom:20px;
+
+    border-bottom:
+    1px solid rgba(255,255,255,.2);
+
+}
+
+
+
+.company-logo{
+
+    width:48px;
+
+    height:48px;
+
+    background:white;
+
+    padding:5px;
+
+    border-radius:8px;
+
+    object-fit:contain;
+
+}
+
+
+
+.sidebar-brand h3{
+
+    margin:0;
+
+    color:#F4C430;
+
+    font-size:28px;
+
+}
+
+
+
+.sidebar-brand p{
+
+    margin:0;
+
+    color:#cbd5e1;
+
+    font-size:12px;
+
+}
+
+
+
+.sidebar a{
+
+    display:flex;
+
+    align-items:center;
+
+    padding:14px 15px;
+
+    margin-top:10px;
+
+    color:#e2e8f0;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+
+
+.sidebar a:hover{
+
+    background:#162f52;
+
+    color:#F4C430;
+
+    transform:translateX(5px);
+
+}
+
+
+
+
+.sidebar button{
+
+    width:100%;
+
+    margin-top:40px;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#F4C430;
+
+    color:#0B1F3A;
+
+    font-weight:bold;
+
+}
+
+
+
+
+
+/* =====================
+   HEADER
+===================== */
+
+
+.page-header{
+
+    margin-bottom:30px;
+
+}
+
+
+
+.page-header h1{
+
+    color:#0B1F3A;
+
+    font-size:38px;
+
+    font-weight:700;
+
+}
+
+
+
+.page-header p{
+
+    color:#64748b;
+
+}
+
+
+
+
+
+
+/* =====================
+   GLOBAL CARD
+===================== */
+
+
+.employee-card,
+.locker-section,
+.summary-card,
+.locker-detail-card,
+.key-card{
+
+
+    background:white;
+
+    border-radius:16px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:
+
+    0 8px 25px rgba(0,0,0,.06);
+
+}
+
+
+
+
+
+/* =====================
+   BUTTON
+===================== */
+
+
+.btn-add{
+
+    display:inline-block;
+
+    background:#0B1F3A;
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:8px;
+
+    border:none;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.btn-add:hover{
+
+    background:#F4C430;
+
+    color:#0B1F3A;
+
+}
+
+
+
+
+.btn-delete{
+
+    background:white;
+
+    color:#dc2626;
+
+    border:1px solid #dc2626;
+
+    padding:8px 16px;
+
+    border-radius:6px;
+
+}
+
+
+
+.btn-delete:hover{
+
+    background:#dc2626;
+
+    color:white;
+
+}
+
+
+
+
+
+/* =====================
+   DASHBOARD
+===================== */
+
+
+.company-banner{
+
+    height:300px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:16px;
+
+}
+
+
+
+.company-banner img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    rgba(11,31,58,.75);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding:40px;
+
+    color:white;
+
+}
+
+
+
+.overlay h1{
+
+    color:#F4C430;
+
+    font-size:45px;
+
+}
+
+
+
+.overlay p{
+
+    font-size:18px;
+
+}
+
+
+
+.stat-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:
+
+    0 8px 20px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+
+
+.stat-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+.stat-card h1{
+
+    color:#0B1F3A;
+
+    font-size:42px;
+
+}
+
+
+
+
+
+
+/* =====================
+   EMPLOYEE
+===================== */
+
+
+.employee-card{
+
+    padding:35px;
+
+}
+
+
+
+.employee-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+
+.employee-table thead{
+
+    background:#0B1F3A;
+
+    color:white;
+
+}
+
+
+
+.employee-table th{
+
+    padding:15px;
+
+}
+
+
+
+.employee-table td{
+
+    padding:15px;
+
+    border-bottom:
+
+    1px solid #e5e7eb;
+
+}
+
+
+
+.employee-table tbody tr:hover{
+
+    background:#f8fafc;
+
+}
+
+
+
+.employee-name{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+
+.avatar{
+
+    width:38px;
+
+    height:38px;
+
+    background:#0B1F3A;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:bold;
+
+}
+
+
+
+.badge{
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+}
+
+
+
+.male{
+
+    background:#dbeafe;
+
+    color:#1d4ed8;
+
+}
+
+
+
+.female{
+
+    background:#fce7f3;
+
+    color:#be185d;
+
+}
+
+
+
+.btn-edit{
+
+    background:#0B1F3A;
+
+    color:white;
+
+    padding:8px 16px;
+
+    border-radius:6px;
+
+    text-decoration:none;
+
+}
+
+/* =====================================================
+   LOCKER MANAGEMENT
+===================================================== */
+
+
+.locker-summary{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.summary-card{
+
+    padding:25px;
+
+    transition:.3s;
+
+}
+
+
+
+.summary-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+.summary-card h4{
+
+    color:#64748b;
+
+    font-size:15px;
+
+}
+
+
+
+.summary-card h2{
+
+    color:#0B1F3A;
+
+    font-size:40px;
+
+}
+
+
+
+
+
+
+.locker-section{
+
+    padding:30px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+
+.section-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.section-title h2{
+
+    color:#0B1F3A;
+
+}
+
+
+
+.section-title span{
+
+    background:#F4C430;
+
+    color:#0B1F3A;
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+/* =====================
+   LOCKER GRID
+===================== */
+
+
+.locker-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(6,minmax(0,1fr));
+
+    gap:20px;
+
+}
+
+
+
+.locker-grid a{
+
+    display:flex;
+
+    text-decoration:none;
+
+}
+
+
+
+
+
+.locker-card{
+
+
+    width:100%;
+
+
+    height:140px;
+
+
+    background:white;
+
+
+    border-radius:14px;
+
+
+    border:2px solid #e5e7eb;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    color:#0B1F3A;
+
+
+    transition:.3s;
+
+
+    position:relative;
+
+
+}
+
+
+
+.locker-card:hover{
+
+
+    transform:translateY(-8px);
+
+
+    box-shadow:
+
+    0 15px 30px rgba(0,0,0,.12);
+
+
+}
+
+
+
+.locker-icon{
+
+
+    font-size:35px;
+
+
+}
+
+
+
+.locker-card h3{
+
+
+    margin:10px 0;
+
+
+    font-size:20px;
+
+
+}
+
+
+
+.locker-status{
+
+
+    padding:6px 14px;
+
+
+    border-radius:20px;
+
+
+    font-size:12px;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+/* LOCKER STATUS */
+
+
+.locker-card.available{
+
+    border-color:#22c55e;
+
+}
+
+
+.locker-card.available .locker-status{
+
+
+    background:#dcfce7;
+
+
+    color:#15803d;
+
+
+}
+
+
+
+
+
+.locker-card.occupied{
+
+
+    border-color:#2563eb;
+
+
+}
+
+
+.locker-card.occupied .locker-status{
+
+
+    background:#dbeafe;
+
+
+    color:#1d4ed8;
+
+
+}
+
+
+
+
+
+.locker-card.problem{
+
+
+    border-color:#dc2626;
+
+
+}
+
+
+.locker-card.problem .locker-status{
+
+
+    background:#fee2e2;
+
+
+    color:#dc2626;
+
+
+}
+
+
+
+
+
+
+/* =====================================================
+   LOCKER DETAIL
+===================================================== */
+
+
+.locker-detail-card{
+
+
+    padding:35px;
+
+
+}
+
+
+
+.locker-detail-header{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:20px;
+
+
+    padding-bottom:25px;
+
+
+    border-bottom:1px solid #e5e7eb;
+
+
+}
+
+
+
+
+.locker-big-icon{
+
+
+    width:70px;
+
+
+    height:70px;
+
+
+    background:#0B1F3A;
+
+
+    border-radius:15px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    font-size:40px;
+
+
+}
+
+
+
+
+.locker-detail-header h2{
+
+
+    color:#0B1F3A;
+
+
+    font-size:35px;
+
+
+}
+
+
+
+
+.locker-info-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+
+    gap:20px;
+
+
+    margin-top:30px;
+
+
+}
+
+
+
+
+.info-box{
+
+
+    background:#f8fafc;
+
+
+    padding:20px;
+
+
+    border-radius:12px;
+
+
+}
+
+
+
+.info-box label{
+
+
+    color:#64748b;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+.info-box h3{
+
+
+    color:#0B1F3A;
+
+
+    margin-top:10px;
+
+
+}
+
+
+
+
+
+.assign-box{
+
+
+    margin-top:30px;
+
+
+    padding:30px;
+
+
+    background:#f8fafc;
+
+
+    border-radius:15px;
+
+
+}
+
+
+
+.assigned-box{
+
+
+    margin-top:30px;
+
+
+    padding:25px;
+
+
+    background:#f8fafc;
+
+
+    border-radius:15px;
+
+
+}
+
+
+
+.employee-detail{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:15px;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   KEY MONITORING
+===================================================== */
+
+
+.key-card{
+
+
+    padding:30px;
+
+
+}
+
+
+
+
+.key-header{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.key-header h3{
+
+
+    color:#0B1F3A;
+
+
+}
+
+
+
+
+
+.key-table{
+
+
+    width:100%;
+
+
+    border-collapse:collapse;
+
+
+}
+
+
+
+
+.key-table thead{
+
+
+    background:#0B1F3A;
+
+
+    color:white;
+
+
+}
+
+
+
+.key-table th{
+
+
+    padding:15px;
+
+
+    text-align:left;
+
+
+}
+
+
+
+.key-table td{
+
+
+    padding:15px;
+
+
+    border-bottom:
+
+    1px solid #e5e7eb;
+
+
+}
+
+
+
+.key-table tbody tr:hover{
+
+
+    background:#f8fafc;
+
+
+}
+
+
+
+
+.locker-name{
+
+
+    font-weight:600;
+
+
+    color:#0B1F3A;
+
+
+}
+
+
+
+
+
+
+/* KEY STATUS */
+
+
+.key-badge,
+.condition{
+
+
+    padding:6px 14px;
+
+
+    border-radius:20px;
+
+
+    font-size:12px;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+.key-single{
+
+
+    background:#dcfce7;
+
+
+    color:#15803d;
+
+
+}
+
+
+
+.key-duplicate{
+
+
+    background:#fef3c7;
+
+
+    color:#b45309;
+
+
+}
+
+
+
+.condition-good{
+
+
+    background:#dcfce7;
+
+
+    color:#15803d;
+
+
+}
+
+
+
+.condition-lost{
+
+
+    background:#fee2e2;
+
+
+    color:#dc2626;
+
+
+}
+
+
+
+.condition-damaged{
+
+
+    background:#fef3c7;
+
+
+    color:#b45309;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+
+.form-control{
+
+
+    width:100%;
+
+
+    height:45px;
+
+
+    border-radius:8px;
+
+
+    border:1px solid #cbd5e1;
+
+
+    padding:10px;
+
+
+}
+
+
+
+.form-control:focus{
+
+
+    outline:none;
+
+
+    border-color:#0B1F3A;
+
+
+}
+
+
+
+
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+
+@keyframes fadeUp{
+
+
+from{
+
+
+    opacity:0;
+
+
+    transform:translateY(20px);
+
+
+}
+
+
+to{
+
+
+    opacity:1;
+
+
+    transform:translateY(0);
+
+
+}
+
+
+}
+
+
+
+
+.locker-card,
+.summary-card,
+.key-card,
+.locker-detail-card{
+
+
+    animation:
+
+    fadeUp .5s ease;
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+
+@media(max-width:1200px){
+
+
+.locker-grid{
+
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+
+}
+
+
+
+.locker-info-grid{
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+}
+
+
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+.sidebar{
+
+
+    width:80px;
+
+
+}
+
+
+
+
+.sidebar-brand h3,
+
+.sidebar-brand p,
+
+.sidebar a{
+
+
+    display:none;
+
+
+}
+
+
+
+.content{
+
+
+    margin-left:80px;
+
+
+    width:calc(100% - 80px);
+
+
+    padding:20px;
+
+
+}
+
+
+
+
+.locker-grid{
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+}
+
+
+
+.locker-summary{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+.company-banner{
+
+
+    height:220px;
+
+
+}
+
+
+
+.overlay h1{
+
+
+    font-size:30px;
+
+
+}
+
+
+
+}
+
+
+
+
+@media(max-width:500px){
+
+
+.locker-grid{
+
+
+    grid-template-columns:
+
+    repeat(1,1fr);
+
+
+}
+
+/* =====================
+   KEY FORM
+===================== */
+
+
+.key-card{
+
+    padding:35px;
+
+}
+
+
+
+.key-card .form-label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#0B1F3A;
+
+    font-weight:600;
+
+}
+
+
+
+textarea.form-control{
+
+    height:auto;
+
+    resize:none;
+
+}
+
+
+
+.btn-cancel{
+
+    margin-left:10px;
+
+    padding:12px 22px;
+
+    border-radius:8px;
+
+    border:1px solid #cbd5e1;
+
+    color:#334155;
+
+    text-decoration:none;
+
+}
+
+/* =====================================================
+   LOGIN PAGE
+===================================================== */
+
+
+.login-page{
+
+
+min-height:100vh;
+
+
+background:
+
+
+linear-gradient(
+
+135deg,
+
+#0B1F3A,
+
+#162f52
+
+);
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+}
+
+
+
+
+
+.login-background{
+
+
+width:100%;
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+}
+
+
+
+
+.login-card{
+
+
+width:420px;
+
+
+background:white;
+
+
+padding:45px;
+
+
+border-radius:20px;
+
+
+box-shadow:
+
+
+0 20px 50px rgba(0,0,0,.25);
+
+
+text-align:center;
+
+
+animation:
+
+fadeUp .6s ease;
+
+
+}
+
+
+
+
+.login-logo img{
+
+
+width:80px;
+
+
+height:80px;
+
+
+object-fit:contain;
+
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.login-card h1{
+
+
+font-size:28px;
+
+
+font-weight:700;
+
+
+color:#0B1F3A;
+
+
+margin-bottom:10px;
+
+
+}
+
+
+
+.login-subtitle{
+
+
+color:#64748b;
+
+
+margin-bottom:30px;
+
+
+font-size:14px;
+
+
+}
+
+
+
+
+
+.login-input{
+
+
+text-align:left;
+
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.login-input label{
+
+
+display:block;
+
+
+font-weight:600;
+
+
+color:#0B1F3A;
+
+
+margin-bottom:8px;
+
+
+}
+
+
+
+
+.login-input input{
+
+
+width:100%;
+
+
+height:45px;
+
+
+border:1px solid #cbd5e1;
+
+
+border-radius:8px;
+
+
+padding:10px 15px;
+
+
+font-size:14px;
+
+
+}
+
+
+
+.login-input input:focus{
+
+
+outline:none;
+
+
+border-color:#F4C430;
+
+
+box-shadow:
+
+
+0 0 0 3px rgba(244,196,48,.2);
+
+
+}
+
+
+
+
+
+.login-option{
+
+
+text-align:left;
+
+
+margin-bottom:25px;
+
+
+font-size:14px;
+
+
+}
+
+
+
+
+
+.login-button{
+
+
+width:100%;
+
+
+height:45px;
+
+
+background:#0B1F3A;
+
+
+color:white;
+
+
+border:none;
+
+
+border-radius:8px;
+
+
+font-weight:700;
+
+
+transition:.3s;
+
+
+}
+
+
+
+
+.login-button:hover{
+
+
+background:#F4C430;
+
+
+color:#0B1F3A;
+
+
+}
+
+
+
+
+.company-text{
+
+
+margin-top:30px;
+
+
+font-size:13px;
+
+
+color:#64748b;
+
+
+}
+
+
+}
